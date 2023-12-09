@@ -8,6 +8,17 @@ FragTrap::FragTrap(std::string name) : ScavTrap(name)
     std::cout << "a fragtrap spawned" << std::endl;
 }
 
+FragTrap::FragTrap(const FragTrap& other) : ScavTrap(other)
+{
+    std::cout << "a fragtrap spawned" << std::endl;
+}
+
+FragTrap& FragTrap::operator=(const FragTrap& other)
+{
+    ScavTrap::operator=(other);
+    return (*this);
+}
+
 FragTrap::~FragTrap(){
     std::cout << "fragtap destroyed" << std::endl;
 }
