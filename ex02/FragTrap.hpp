@@ -1,8 +1,8 @@
-#include "ScavTrap.hpp"
+#include "ClapTrap.hpp"
 #ifndef FRAGTRAP_HPP
 #define FRAGTRAP_HPP
 
-class FragTrap : public ScavTrap
+class FragTrap : public ClapTrap
 {
 public:
     FragTrap();
@@ -10,6 +10,7 @@ public:
     FragTrap(const FragTrap& other);
     FragTrap& operator=(const FragTrap& other);
     ~FragTrap();
+
     void highFivesGuys(void);
 };
 

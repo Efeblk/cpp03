@@ -1,28 +1,34 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(std::string name) : ScavTrap(name)
+FragTrap::FragTrap(){
+    this->hitPoints = 100;
+    this->energyPoints = 100;
+    this->attackDamage = 30;
+    std::cout << "FragTrap default constructor called" << std::endl;
+}
+FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
     this->hitPoints = 100;
     this->energyPoints = 100;
     this->attackDamage = 30;
-    std::cout << "a fragtrap spawned" << std::endl;
+    std::cout << "FragTrap name constructor called" << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap& other) : ScavTrap(other)
+FragTrap::FragTrap(const FragTrap& other) : ClapTrap(other)
 {
-    std::cout << "a fragtrap spawned" << std::endl;
+    std::cout << "FragTrap copy constructor called" << std::endl;
 }
 
 FragTrap& FragTrap::operator=(const FragTrap& other)
 {
-    ScavTrap::operator=(other);
+    ClapTrap::operator=(other);
     return (*this);
 }
 
 FragTrap::~FragTrap(){
-    std::cout << "fragtap destroyed" << std::endl;
+    std::cout << "Fragtap destructor called" << std::endl;
 }
 
 void FragTrap::highFivesGuys(){
-    std::cout << "high five !" << std::endl;
+    std::cout << this->name <<" wants high five !" << std::endl;
 }

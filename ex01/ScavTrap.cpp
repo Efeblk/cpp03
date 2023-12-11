@@ -16,7 +16,7 @@ ScavTrap::ScavTrap(std::string name)
     this->hitPoints = 100;
     this->energyPoints = 50;
     this->attackDamage = 20;
-    std::cout << "ScavTrap default constructor called" << std::endl;
+    std::cout << "ScavTrap name constructor called" << std::endl;
 }
 
 ScavTrap::ScavTrap(const ScavTrap& other)
